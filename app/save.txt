@@ -1,0 +1,23 @@
+from app import app
+from flask import render_template, request, redirect
+import pandas as pd
+
+# Route to main page
+
+@app.route('/')
+def hello():
+    return render_template('hello.html')
+
+@app.route('/recommend/', methods=["GET", "POST"])
+def recommend():
+    # data = pd.read_csv('Spotify_Song_Attributes.csv')
+    # return render_template('recommend.html', tables=[data.to_html()], titles=[''])
+
+    if request.method == "POST":
+        songRequest = request.form
+        
+        print(songRequest)
+
+        return redirect(request.url)
+
+    return render_template('recommend.html')

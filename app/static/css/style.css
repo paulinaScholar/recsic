@@ -1,0 +1,59 @@
+body{
+    background-color: gainsboro	;
+}
+
+#songlist{
+  display: none;
+  font-size: large;
+}
+
+#noSong{
+  display: none;
+}
+
+
+.all_skills {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+}
+
+.skill {
+  border: 1px solid gray;
+  display: block;
+  border-radius: 6px;
+  text-align: center;
+  margin: 50px;
+  padding: 10px;
+  width: 2.5in;
+  font-size: 20px;
+  box-shadow: 0 3px 10px gray;
+}
+
+.skill img {
+  height: 35px;
+  align-items: center;
+}
+
+.skills h6 {
+  align-items: center;
+  font-size: 20px;
+  margin-block-start: 8px;
+  margin-block-end: 5px;
+  font-weight: bold;
+  color: #6f42c1;
+} 
+
+.skills p {
+  align-items: center;
+  font-size: 15px;
+  color: gray;
+  margin-block-start: 5px;
+  margin-block-end: 5px;
+} 
+
+.flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

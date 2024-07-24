@@ -1,0 +1,59 @@
+{% extends "layout/base.html" %}
+
+{% block title %}Recsic Recommender{% endblock %}
+
+{% block main %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Recommender</h1>
+            <hr>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <form action="#" method="POST" name="formSong">
+                <div class="form-group"></div>
+                <label><strong><font size="+2">Enter a <font color=#6f42c1>song</font>:</font></strong></label>
+                <input class="form-control" type="text" name="song_input" required>
+                <button style="margin-top: 10px;" class="btn btn-primary" onclick="setTimeout()">Generate</button>
+            </form>
+        </div>
+    </div>
+    <hr style="margin-top: 30px; margin-bottom: 20px;">
+</div>
+
+<div class="container" id="songlist">
+    <div class="row">
+        <div class="col">
+            <h3>Songlist</h3><br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" style="margin-bottom: 40px;"> 
+            <table class="table" id="tableSong"> 
+                <h1> 
+                <!--Displaying the converted table-->
+                     {% for table in tblRec %} 
+                    <h2>{{titles[loop.index]}}</h2>                             
+                    {{ table|safe }} 
+                    {% endfor %}      
+                </h1>  
+            </table> 
+        </div> 
+    </div>
+
+</div>
+
+<div class="container" id="noSong">
+    <div class="row">
+        <div class="col">
+            <p>No song available</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
